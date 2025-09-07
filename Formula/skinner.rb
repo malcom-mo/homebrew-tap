@@ -1,16 +1,16 @@
 class Skinner < Formula
   desc "Terminal theme manager with macOS dark mode sync"
   homepage "https://github.com/malcom-mo/skinner"
-  url "https://github.com/malcom-mo/skinner/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "36adf397b311032410193c4aceb5f8483854cef5db7ac85b0d915caaf88d6032"
+  url "https://github.com/malcom-mo/skinner/archive/refs/tags/v1.0.1.tar.gz"
+  sha256 "86ed3c9eada93ff7aef3929281e1b54a9d631975394f44bd89f3aea5d0d28628"
   license "MIT"
-  version "1.0.0"
+  version "1.0.1"
 
   bottle do
-    root_url "https://github.com/malcom-mo/skinner/releases/download/v1.0.0"
-    rebuild 2
-    sha256 arm64_sequoia: "c7d2df5dee9ef73369371936d2b68b6630727167143cda6e8835317eca20c836"
-    sha256 arm64_sonoma:  "8813f82343a41ad992fa545139553f61ecb470716c7d1c1a49a7017c7ad7c500"
+    root_url "https://github.com/malcom-mo/skinner/releases/download/v1.0.1"
+    rebuild 3
+    sha256 arm64_sequoia: "b44b87e0a6c626b0e9755317879658eb52117ffcc790fc5a065b09f2c4371a3c"
+    sha256 arm64_sonoma:  "1ca23d3ec692cdcefbfd58fe1d1f8eb6e418d31fb1759fb62ce0fe079e5c305c"
   end
 
   depends_on :macos
