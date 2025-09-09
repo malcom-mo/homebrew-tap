@@ -2,15 +2,16 @@ class Skinner < Formula
   desc "Terminal theme manager with macOS dark mode sync"
   homepage "https://github.com/malcom-mo/skinner"
   url "https://github.com/malcom-mo/skinner/archive/refs/tags/v1.0.3.tar.gz"
-  sha256 "21b87a0f074420038f71f9a8ab908e232a17e2cddf95b8f18c709492d4605512"
+  sha256 "e98a3f5ae767cd2e39928929242bf9a0f1822f3a5f0f0c5b6bd0b2611388d0ae"
   license "MIT"
   version "1.0.3"
 
   bottle do
     root_url "https://github.com/malcom-mo/skinner/releases/download/v1.0.3"
-    sha256 cellar: :any_skip_relocation, arm64_sequoia: "6f00702d35a92eb284118d941c357538df0a7a4252f4e15be8db550deca83ca4"
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "1350535585704f74ccb2a2136fbf749a9eefcb65031a30fe89efba51d3a73a1b"
-    sha256 cellar: :any_skip_relocation, ventura:       "53cf5cd9667ccb28f6b19f04ca9fd0d526969fe7bc56d2bea2897ff4b88644b8"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sequoia: "d25dbc8a5ec0f74668892ac8f1467b8fb12988205c220d808de5d116e3329109"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:  "92d7865569e7f92a5bf06670151790e87fa82117de499454ea7d3561c927cd02"
+    sha256 cellar: :any_skip_relocation, ventura:       "bb0ad4e817dd2297e48407927a049004d70f3248471c4eebf707ffd86234c90b"
   end
 
   depends_on :macos
