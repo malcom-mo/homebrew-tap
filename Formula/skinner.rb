@@ -13,20 +13,19 @@ class Skinner < Formula
     sha256 cellar: :any_skip_relocation, ventura:       "53cf5cd9667ccb28f6b19f04ca9fd0d526969fe7bc56d2bea2897ff4b88644b8"
   end
 
-  depends_on :macos
   depends_on "rust" => :build
-  depends_on "swift" => :build
+  uses_from_macos "swift" => :build
 
   def install
     system "cargo", "build", "--release", "--bin", "skinner", "--verbose"
     bin.install "target/release/skinner"
 
-    system "swiftc", "skinner-sync.swift", "-o", "skinner-sync"
-    bin.install "skinner-sync"
+    system "swiftc", "skinner-sync.swift", "-o", "skinner-sync" if OS.mac?
+    bin.install "skinner-sync" if OS.mac?
   end
 
   service do
-    run [bin/"skinner-sync"]
+    run macos: [bin/"skinner-sync"]
     environment_variables PATH: std_service_path_env
     keep_alive true
     log_path var/"log/skinner-sync.log"
